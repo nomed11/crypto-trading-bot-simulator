@@ -71,6 +71,86 @@ crypto-trading-bot-simulator/
 
 3. Use the `/backtest` endpoint to run backtests with different strategies and parameters
 
+## Example Usage
+
+You can interact with the CryptoTrade Simulator through its API using curl or tools like Postman.
+
+### Using curl
+
+1. Run a backtest:
+
+```bash
+curl -X POST "http://localhost:8000/backtest" \
+     -H "Content-Type: application/json" \
+     -d '{
+  "symbol": "BTC/USD",
+  "timeframe": "1h",
+  "start_date": "2023-06-01T00:00:00",
+  "end_date": "2023-07-01T00:00:00",
+  "strategies": [
+    {
+      "name": "SMA",
+      "short_window": 10,
+      "long_window": 30
+    },
+    {
+      "name": "RSI",
+      "rsi_window": 14,
+      "overbought": 70,
+      "oversold": 30
+    }
+  ]
+}'
+```
+
+2. Get available strategies:
+
+```bash
+curl "http://localhost:8000/available-strategies"
+```
+
+### Using Postman
+
+1. For the backtest endpoint:
+   - Create a new POST request to `http://localhost:8000/backtest`
+   - Add header: `Content-Type: application/json`
+   - In the request body (raw JSON), use:
+
+```json
+{
+  "symbol": "BTC/USD",
+  "timeframe": "1h",
+  "start_date": "2023-06-01T00:00:00",
+  "end_date": "2023-07-01T00:00:00",
+  "strategies": [
+    {
+      "name": "SMA",
+      "short_window": 10,
+      "long_window": 30
+    },
+    {
+      "name": "RSI",
+      "rsi_window": 14,
+      "overbought": 70,
+      "oversold": 30
+    }
+  ]
+}
+```
+
+2. For available strategies:
+   - Create a new GET request to `http://localhost:8000/available-strategies`
+
+### Tips for Using the Simulator
+
+- Modify the `symbol` to test different cryptocurrencies (e.g., "ETH/USD" for Ethereum)
+- Adjust the `timeframe` for different intervals (e.g., "15m", "4h", "1d")
+- Change `start_date` and `end_date` to backtest over different periods
+- Experiment with strategy parameters to optimize performance
+- Add multiple strategies to compare their performance under the same market conditions
+
+For more detailed information about the endpoints and request/response formats, refer to the API documentation at `http://localhost:8000/docs`.
+
 ## Running Tests
 Execute the test suite using pytest:
 ```
