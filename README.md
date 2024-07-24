@@ -46,7 +46,7 @@ crypto-trading-bot-simulator/
 ## Setup and Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/crypto-trading-bot-simulator.git
+   git clone https://github.com/nomed11/crypto-trading-bot-simulator.git
    cd crypto-trading-bot-simulator
    ```
 
