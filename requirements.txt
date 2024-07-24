@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pandas
+numpy
+matplotlib
+ccxt
+python-dotenv
+pytest
