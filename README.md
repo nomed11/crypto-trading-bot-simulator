@@ -86,3 +86,6 @@ pytest
 - Add support for more cryptocurrency exchanges
 - Develop a user interface for easier interaction and visualization
 - Incorporate machine learning models for predictive analysis
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
