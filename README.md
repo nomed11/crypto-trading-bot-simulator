@@ -38,6 +38,7 @@ crypto-trading-bot-simulator/
 │   ├── test_backtest.py
 │   ├── test_trading_bot.py
 │   ├── test_strategies.py
+├── .gitignore
 ├── requirements.txt
 ├── README.md
 ```
